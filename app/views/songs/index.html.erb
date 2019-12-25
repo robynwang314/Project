@@ -1,0 +1,53 @@
+<ul>
+  <li><a class="active" href="/">Home</a></li>
+  <li><a href="https://www.spotify.com/us/account/overview/">My Account</a></li>
+  <li><%= link_to 'My Playlists', player_playlists_path %>My Playlists</li>
+</ul>
+<p id="notice"><%= notice %></p>
+
+<h1>Songs</h1>
+<div><%= link_to 'New Song', new_player_playlist_song_path %></div>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @songs.each do |song| %>
+        <tr>
+          <td><%= song.name %><td> by <%= song.artist_name %></td></td>
+          <td><iframe src="https://embed.spotify.com/?uri=<%=song.spotify_uri%>" width="300" height="380" frameborder="0" allowtransparency="true"></iframe></td>
+          <td><%= link_to 'Delete', player_playlist_song_path(song.playlist.player.id, song.playlist.id, song), id: "destroy#{song.id}", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+    <br>
+<br>
+  <br>
+<br>
+    <h1>Your Recommendations:</h1>
+
+    <p></p>
+    <div id="multiColumn">
+      
+        <% @r_tracks.each do |track| %>
+          <h3><%=track.name%>
+            <iframe src="https://embed.spotify.com/?uri=<%=track.uri%>" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+          </h3>
+        
+        <% end %>
+  <br>
+
+
+  <footer>
+    <%= link_to 'Show Playlists', player_playlists_path %>
+  </footer>
+</div>
