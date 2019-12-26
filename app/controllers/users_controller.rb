@@ -1,10 +1,9 @@
 class UsersController < ApplicationController
+  # RSpotify::authenticate(ENV["SPOTIFY_CLIENT_ID"], ENV["SPOTIFY_CLIENT_SECRET"])
+  # before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   
   def index
-    @spotify_user = RSpotify::User.new
-    @spotify_email = @spotify_user.email
-    new_player = Player.new(email: @spotify_email)
-    new_player.save unless Player.exists?(email: @spotify_email)
-    @playerid = (Player.find_by(email: @spotify_email)).id
+    @spotify_user = RSpotify::User.new(request.env['omniauth.auth'])
   end
+
 end

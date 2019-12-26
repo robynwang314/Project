@@ -76,6 +76,7 @@ end
 
 gem "figaro"
 
-gem 'rspotify'
+gem 'rspotify', '~> 2.7'
 
 gem 'mini_racer'
+

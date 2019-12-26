@@ -16,4 +16,11 @@ RSpec.describe ArtistsController, type: :controller do
     end
   end
 
+  describe "artist#new action" do
+    it "should successfully show the search form" do 
+      get :new
+      expect(response).to have_http_status(:success)
+    end
+  end
+
 end
