@@ -1,14 +1,14 @@
-<ul>
-  <li><a class="active" href="/users/">Home</a></li>
-  <li><a href="https://www.spotify.com/us/account/overview/">My Account</a></li>
-  <li><a href="/playlists/">My Playlists</a></li>
-  <li><a href="/artists/new/">Search Artists</a></li>
-  
-</ul>
+<!-- 
+<%= @spotify_user.inspect %> -->
 
-<%= @spotify_user.inspect %>
+<li><a href="/artists/new/">Search Artists</a></li>
 
+<br/><br/><br/>
+<%= @spotify_user.display_name %>
+<%= @spotify_user.email %>
 
 
-
-
+<% @playlists.each do |playlist|%>
+  <li><%= playlist.name%>
+</li>
+<% end %>

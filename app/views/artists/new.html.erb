@@ -1,7 +1,10 @@
-<h1 class="page-header">Spotify Demo</h1>
-<%= form_tag artists_path, method: "get", html: { class: "form" } do %>
- <div class="form-group col-sm-4">
-   <%= text_field_tag(:artist_name, "", placeholder: "Enter artist name", class: "form-control") %>
- </div>
- <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %> 
+
+  <h1 class="page-header">Spotify Demo</h1>
+
+  <div class="form-inline my-2 my-lg-0">
+    <%= form_tag artists_path, method: "get", html: { class: "form" } do %>
+    <%= text_field_tag(:artist_name, "", placeholder: "Enter artist name", class: "form-control mr-sm-2") %>
+    <%= submit_tag "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
+    <% end %> 
+  </div>
+
