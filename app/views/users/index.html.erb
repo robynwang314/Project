@@ -1,14 +1,38 @@
 <!-- 
 <%= @spotify_user.inspect %> -->
 
-<li><a href="/artists/new/">Search Artists</a></li>
+<br/><br/>
+<header>
+  <center class= "header">
+    <h3> Welcome, <%= @spotify_user.display_name %> </h3>
+    <p><%= @spotify_user.email %></p>
+  </center>
 
-<br/><br/><br/>
-<%= @spotify_user.display_name %>
-<%= @spotify_user.email %>
+  <br/>
+  
+  <div align="center">
+    Current top artist: <%= @spotify_user.top_artists.first.name%><br/>
+    Current top track: <%= @spotify_user.top_tracks.first.name%>
+    </div>
 
+</header>
 
-<% @playlists.each do |playlist|%>
-  <li><%= playlist.name%>
-</li>
-<% end %>
+<br/><br/>
+
+<body>
+  <center class="dashboard">
+    <a class="active" href="/">Home</a> 
+    <a href="https://www.spotify.com/us/account/overview/">My Account</a> 
+    <%= link_to 'My Playlists', playlists_path %> 
+    <a href="/artists/new/">Search Artists</a>
+  </center>
+
+  
+    <br/>
+
+  Your Playlists: <br/>
+  <% @playlists.each do |playlist|%>
+    <li><%= playlist.name%></li>
+  <% end %>
+</body>
+
