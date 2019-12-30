@@ -1,3 +1,0 @@
-class Playlist < ApplicationRecord
- 
-end
