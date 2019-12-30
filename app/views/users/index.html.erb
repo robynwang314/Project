@@ -11,8 +11,8 @@
   <br/>
   
   <div align="center">
-    Current top artist: <%= @spotify_user.top_artists.first.name%><br/>
-    Current top track: <%= @spotify_user.top_tracks.first.name%>
+    My current top artist: <%= @spotify_user.top_artists.first.name%><br/>
+    My current top track: <%= @spotify_user.top_tracks.first.name%>
     </div>
 
 </header>
@@ -30,7 +30,7 @@
   
     <br/>
 
-  Your Playlists: <br/>
+  My Playlists: <br/>
   <% @playlists.each do |playlist|%>
     <li><%= playlist.name%></li>
   <% end %>
