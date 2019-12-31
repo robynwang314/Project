@@ -1,8 +1,14 @@
 <br/>
 <center>
   <h1>My Playlists</h1>
+  <div><%= link_to 'Create A New Playlist', new_playlist_path %></div>
 </center>
 
-<div><%= link_to 'Create A New Playlist', new_playlist_path %></div>
+<br/>
 
-<%= @user_hash.inspect %>
+<ol><% @playlists.each do |playlist|%>
+  <li><%= playlist.name%></li>
+<% end %></ol>
+
+
+

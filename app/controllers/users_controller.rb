@@ -21,7 +21,6 @@ class UsersController < ApplicationController
       @user_hash = u.spotify_hash
       @spotify_user = RSpotify::User.new(u.spotify_hash)
     end
-    @playlists = @spotify_user.playlists
   end
 
 end
