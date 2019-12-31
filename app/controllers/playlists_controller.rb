@@ -9,12 +9,13 @@ require 'rspotify'
   end
 
   def new
-    
+ 
   end
   
   def create
-    @spotify_user.create_playlist!
+   
   end 
+
 end
 
 
