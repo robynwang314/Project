@@ -8,6 +8,20 @@
 
 <ul>
   <% @artist.top_tracks('US').each do |track| %>
-    <li><%= track.name%> | <%= link_to "Add" %> </li> 
+    <li><%= track.name%> 
+        <form id="" action="/playlists/add_song" method="post">
+          <select name="playlist_name">
+            ...
+          </select>
+          <input type="hidden" name="track_id" value="..." />
+        </form>
+        <script type="text/javascript">
+          $(function() {
+            $('form#the_id_you_chose').find('select').on('change', function () {
+              $('form#the_id_you_chose').submit();
+            });
+          });
+        </script>
+     </li> 
   <% end %>
 </ul>
