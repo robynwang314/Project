@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       begin
         u = User.find_by_email(@user_hash["email"])
       end
-       u = User.new if u.nil?
+      u = User.new if u.nil?
       u.spotify_hash = @user_hash
       u.email = @user_hash["email"]
       u.token = @user_hash["credentials"]["token"]
@@ -21,6 +21,9 @@ class UsersController < ApplicationController
       @user_hash = u.spotify_hash
       @spotify_user = RSpotify::User.new(u.spotify_hash)
     end
+  end
+
+  def destroy
   end
 
 end
