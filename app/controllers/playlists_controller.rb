@@ -16,13 +16,13 @@ require 'rspotify'
   end
 
 
-  # def remove_track
-  #   @spotify_user = load_user
-  #   @playlist = RSpotify::Playlist.find(@spotify_user.id, params[:playlist_id])
-  #   @track = RSpotify::Track.search(params[:track_id])
-  #   @playlist.remove_tracks!([@track])
-  #   @playlist.save
-  # end
+  def remove_track
+    # @spotify_user = load_user
+    # @playlist = RSpotify::Playlist.find(@spotify_user.id, params[:playlist_id])
+    # @track = RSpotify::Track.find(params[:track])
+    # @playlist.remove_tracks!([@track])
+    # redirect_to playlist_path
+  end
 
   def show
     @spotify_user = load_user

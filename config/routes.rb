@@ -3,12 +3,10 @@ Rails.application.routes.draw do
   
   root "home#index"
   get '/auth/spotify/callback', to: 'users#index'
-  resources :artists, only: [:index, :show, :new] do
-    resources :songs, only: [:new, :create]
-  end
-  post "/playlists/add_track", to: 'playlists#add_track'
-  delete "/playlists/remove_track", to: 'playlists#remove_track'
+  resources :artists, only: [:index, :show, :new] 
   resources :users, only: [:index, :destroy]
   resources :playlists, only: [:index, :new, :show]
+  post "/playlists/add_track", to: 'playlists#add_track'
+  delete "/playlists/remove_track", to: 'playlists#remove_track'
   
 end
