@@ -24,9 +24,8 @@ class UsersController < ApplicationController
   end
 
   def destroy
-     @spotify_user = load_user
-     @spotify_user.destroy
-     redirect_to root_path
-  end
+    session[:active_email] = nil
+    redirect_to root_path
+  end 
 
 end

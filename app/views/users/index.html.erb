@@ -18,9 +18,8 @@
 
 <body>
   <center class="dashboard">
-    <a class="active" href="/">Home</a> &nbsp; &nbsp; &nbsp;
-    <a href="https://www.spotify.com/us/account/overview/">My Account</a> &nbsp; &nbsp; &nbsp;
-    <%= link_to 'My Playlists', playlists_path %> &nbsp; &nbsp; &nbsp;
+    <a> <%= link_to 'My Playlists', playlists_path %></a> &nbsp; &nbsp; &nbsp;
+    <a><%= link_to 'My Spotify Account', "https://www.spotify.com/us/account/overview/", target: :_blank, class: 'dashboard' %></a> &nbsp; &nbsp; &nbsp;
     <a href="/artists/new/">Search Artists</a> &nbsp; &nbsp; &nbsp;
   </center>
 
