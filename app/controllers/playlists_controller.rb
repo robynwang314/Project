@@ -15,15 +15,18 @@ require 'rspotify'
     render :action => "show"
   end
 
+
+  # def remove_track
+  #   @spotify_user = load_user
+  #   @playlist = RSpotify::Playlist.find(@spotify_user.id, params[:playlist_id])
+  #   @track = RSpotify::Track.search(params[:track_id])
+  #   @playlist.remove_tracks!([@track])
+  #   @playlist.save
+  # end
+
   def show
     @spotify_user = load_user
-    @playlist = RSpotify::Playlist.find(@spotify_user.id,params[:id])
-  end
-
-  private
-
-  def playlist_params
-    params.permit(:songs, :user_id)
+    @playlist = RSpotify::Playlist.find(@spotify_user.id, params[:id])
   end
 
 end

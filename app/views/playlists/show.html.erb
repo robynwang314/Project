@@ -1,3 +1,15 @@
-<% @playlist.tracks.each do |t| %>
-  <p><%= t.id %>: <%= t.name %></p>
-<% end %>
+
+<br/>
+<center> 
+  <h1 class="page-header"> 
+    <%= @playlist.name %>
+  </h1> 
+</center> 
+
+<br/>
+
+<ol><% @playlist.tracks.each do |track| %>
+ <li><%= track.name %></li>
+<% end %></ol>
+
+
