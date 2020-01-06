@@ -10,6 +10,7 @@
 <br/>
 
 <ol><% @playlist.tracks.each do |track| %>
- <li><%= track.name %> | <%= link_to 'Remove Track', playlists_remove_track_path, method: :delete %></li>
+ <li><%= track.name %> | <%= link_to 'Remove Track', "#", method: :delete %>
+ </li>
 <% end %></ol>
 
