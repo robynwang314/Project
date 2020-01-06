@@ -12,16 +12,18 @@ require 'rspotify'
     @track = RSpotify::Track.find(params[:track_id])
     @playlist.add_tracks!([@track])
 
-    render :action => "show"
+    redirect_to playlist_path(params[:playlist_id])
+
+    # render :action => "show"
   end
 
 
   def remove_track
-    # @spotify_user = load_user
-    # @playlist = RSpotify::Playlist.find(@spotify_user.id, params[:playlist_id])
-    # @track = RSpotify::Track.find(params[:track])
-    # @playlist.remove_tracks!([@track])
-    # redirect_to playlist_path
+    @spotify_user = load_user
+    @playlist = RSpotify::Playlist.find(@spotify_user.id, params[:playlist_id])
+    @track = RSpotify::Track.find(params[:track_id])
+    @playlist.remove_tracks!([@track])
+    redirect_to playlist_path(params[:playlist_id])
   end
 
   def show

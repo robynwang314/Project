@@ -19,4 +19,12 @@ RSpec.describe UsersController, type: :controller do
   #   # end
   # end
 
+  describe "users#destroy action" do
+    it "should log a user out" do
+      delete :destroy
+      expect(session[:active_email]).to eq nil
+      expect(response).to redirect_to root_path
+    end
+  end
+  
 end
