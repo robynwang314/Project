@@ -11,22 +11,25 @@
 <ol>
   <% @artist.top_tracks('US').each do |track| %>
     <li class="form"><%= track.name%> 
-      <form class="row float-right" id="playlists" action="/playlists/add_track" method="post">
+      <form class="row float-right playlists" action="/playlists/add_track" method="post">
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
         <select name="playlist_id">
+          <option value="" selected="selected">pick playlist</option>
           <% @playlists.each do |playlist|%>
             <option value="<%= playlist.id %>"><%= playlist.name%></option>
           <% end %>
         </select>
         <input type="hidden" name="track_id" value="<%= track.id %>" />
       </form>
-      <script type="text/javascript">
-        $(function() {
-          $('form#playlists').find('select').on('click', function () {
-            $('form#playlists').submit();
-          });
-        });
-      </script>
      </li> 
   <% end %>
 </ol>
+
+
+<script type="text/javascript">
+  $(function() {
+    $('form.playlists select').on('change', function (event) {
+      $(event.target).parent().submit();
+    });
+  });
+</script>

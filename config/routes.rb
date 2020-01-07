@@ -7,8 +7,7 @@ Rails.application.routes.draw do
   
   resources :users, only: [:index, :destroy]
     delete '/logout', to: 'users#destroy'
-  resources :playlists, only: [:index, :new, :show, :destroy]
-    post "/playlists/add_track", to: 'playlists#add_track'
-
-  
+  resources :playlists, only: [:index, :show] 
+  post "/playlists/add_track", to: 'playlists#add_track'
+  delete "/playlists/remove_track", to: 'playlists#remove_track'
 end

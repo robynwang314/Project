@@ -9,8 +9,45 @@
 
 <br/>
 
-<ol><% @playlist.tracks.each do |track| %>
- <li><%= track.name %> | <%= link_to 'Remove Track', "#", method: :delete %>
- </li>
-<% end %></ol>
+<%= params[:id] %>
+
+<%= @playlist %>
+<%= @spotify_user.id %>
+
+
+
+<br/>
+
+<ol>
+  <% @playlist.tracks.each do |track| %>
+    <li><%= track.name %> | 
+      <a class='remove-track' href='#' data-track-id="<%= track.id %>">Remove Track</a>
+    </li>
+  <% end %>
+</ol>
+
+<script>
+  $(function() {
+    $('a.remove-track').click(function(event) {
+        event.preventDefault();
+
+        $.ajax({
+          type: "DELETE",
+          url: "/playlists/remove_track",
+          data: {
+            "track_id": $(event.target).data('track-id'),
+            "playlist_id": "<%= @playlist.id %>"
+          }
+        });
+    });
+  });
+</script>
+
+<!-- 
+<a class="nav-link" href="/users/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/playlists/">My Playlists</a>
+            </li>
+ -->
 
