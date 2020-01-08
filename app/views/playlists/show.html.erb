@@ -1,13 +1,14 @@
-
 <br/>
 <center> 
   <h1 class="page-header"> 
     <%= @playlist.name %>
   </h1> 
-  <p><%= @playlist.total %> Songs In <i><%= @playlist.name %></i></p>
+  <p><%= @playlist.total %> Songs In <i><%= @playlist.name %></i>
+    <br/>
+    <font size='1'>Start New Artist Search to Add Tracks</font>
+  </p>
+  <br/>
 </center> 
-
-<br/>
 
 <ol>
   <% @playlist.tracks.each do |track| %>
@@ -17,11 +18,13 @@
   <% end %>
 </ol>
 
+
 <script>
   $(function() {
     $('a.remove-track').click(function(event) {
         event.preventDefault();
-
+      var del=confirm("Are you sure you want to remove this track?");
+      if (del==true){
         $.ajax({
           type: "DELETE",
           url: "/playlists/remove_track",
@@ -30,15 +33,11 @@
             "playlist_id": "<%= @playlist.id %>"
           }
         });
+      }else{
+        alert("Track not removed")
+       }
     });
   });
 </script>
 
-<!-- 
-<a class="nav-link" href="/users/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/playlists/">My Playlists</a>
-            </li>
- -->
 
