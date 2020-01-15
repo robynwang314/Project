@@ -12,7 +12,7 @@ This allows users to:
 User Manual
 
 Users can either begin a search for an artist from the Navigation Bar without logging in, or choose to sign in with spotify. 
-  <img src="homepage.png" alt="App homepage">
+  <img src="/app/assets/images/homepage.png" alt="App homepage">
 
 Beginning a search without logging in, will eventually return results with the artist's top 10 tracks, however, users must sign in to perform any further action.
   <img src="index.png" alt="Artists results">
