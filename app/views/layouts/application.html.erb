@@ -10,10 +10,11 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-toggleable-sm navbar-light bg-faded">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <a class="navbar-brand">
         <% if @spotify_user %>
           <%= link_to 'SpotifyApp', users_path, class: 'navbar-brand' %>
@@ -25,7 +26,7 @@
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
           <% if @spotify_user %>
             <li class="nav-item">
-              <a class="nav-link" href="/users/">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/users/">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/playlists/">My Playlists</a>
