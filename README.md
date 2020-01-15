@@ -10,43 +10,36 @@ This allows users to:
   5. remove a track from their existing playlist 
 
 User Manual
-  1. Users can either begin a search for an artist from the Navigation Bar without logging in, or choose to sign in with spotify. 
 
-    <img src="homepage.png" alt="App homepage">
+Users can either begin a search for an artist from the Navigation Bar without logging in, or choose to sign in with spotify. 
+  <img src="homepage.png" alt="App homepage">
 
-    Beginning a search without logging in, will eventually return results with the artist's top 10 tracks, however, users must sign in to perform any further action.
+Beginning a search without logging in, will eventually return results with the artist's top 10 tracks, however, users must sign in to perform any further action.
+  <img src="index.png" alt="Artists results">
+  <img src="else.png" alt="Not logged in search results">
 
-    <img src="index.png" alt="Artists results">
-    <img src="else.png" alt="Not logged in search results">
+  By choosing to sign in, users will be redirected to Spotify's login page for their credentials.
+  <img src="callback.png" alt="Spotify Login">
 
-    By choosing to sign in, users will be redirected to Spotify's login page for their credentials.
+After which, the user will be redirected to their user homepage. 
+  <img src="users.png" alt="Users Homepage">
 
-    <img src="callback.png" alt="Spotify Login">
+From here, the user may navigate to view their existing playlists...
+  <img src="playlists.png" alt="User's playlists">
 
-  2. After which, the user will be redirected to their user homepage. 
+  further choose to view the contents of their playlists (up to 100 songs) 
+  <img src="playlist.png" alt="User's playlist">
 
-    <img src="users.png" alt="Users Homepage">
+  and remove tracks from an existing playlist
+  <img src="remove_track.png" alt="Remove_track">
 
-  3. From here, the user may navigate to view their existing playlists...
+Alternatively, Users who are logged in may search an artist, view their top 10 hits, and add a track to an existing playlist. 
+  <img src="search.png" alt="Search Form">
+  <img src="add_track.png" alt="Add_track">
 
-    <img src="playlists.png" alt="User's playlists">
+  Choosing to add a track will redirect user to the chosen playlist with the track added. 
 
-    further choose to view the contents of their playlists (up to 100 songs) 
-
-    <img src="playlist.png" alt="User's playlist">
-
-    and remove tracks from an existing playlist
-
-    <img src="remove_track.png" alt="Remove_track">
-
-  4. Alternatively, Users who are logged in may search an artist, view their top 10 hits, and add a track to an existing playlist. 
-    <img src="search.png" alt="Search Form">
-    <img src="add_track.png" alt="Add_track">
-
-    choosing to add a track will redirect user to the chosen playlist with the track added. 
-
-  5. Clicking "Sign Out" in the Navbar will sign the user out of the app, but the user must go to "My Account" to view their Spotify account page, and to fully log out of the Spotify session. 
-  
+Clicking "Sign Out" in the Navbar will sign the user out of the app, but the user must go to "My Account" to view their Spotify account page, and to fully log out of the Spotify session. 
   <img src="navbar.png" alt="Navbar">
 
 
