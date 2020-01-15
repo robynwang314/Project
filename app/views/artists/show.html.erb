@@ -1,5 +1,5 @@
+<% if @spotify_user %>
 <br/>
-
 <center>
   <h1 class="page-header"><%= @artist.name %></h1>
   <p> Top Ten Songs By <%= @artist.name %> </p>
@@ -7,29 +7,48 @@
 
 <br/>
 
+  <ol>
+    <% @artist.top_tracks('US').each do |track| %>
+      <li class="form"><%= track.name%> 
+        <form class="row float-right playlists" action="/playlists/add_track" method="post">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+          <select name="playlist_id">
+            <option value="" selected="selected">pick playlist</option>
+            <% @playlists.each do |playlist|%>
+              <option value="<%= playlist.id %>"><%= playlist.name%></option>
+            <% end %>
+          </select>
+          <input type="hidden" name="track_id" value="<%= track.id %>" />
+        </form>
+       </li> 
+    <% end %>
+  </ol>
 
-<ol>
+  <script type="text/javascript">
+    $(function() {
+      $('form.playlists select').on('change', function (event) {
+        $(event.target).parent().submit();
+      });
+    });
+  </script>
+
+<% else %>
+ <% if flash[:error].present? %>
+      <div class="col-12 alert alert-danger">
+          <%= flash[:error].html_safe %>
+          Please <u><%= link_to 'SIGN IN', '/auth/spotify/' %></u> to Spotify for more actions
+      </div>
+    <% end %>
+
+<center>
+  <h1 class="page-header"><%= @artist.name %></h1>
+  <p> Top Ten Songs By <%= @artist.name %> </p>
+</center>
+
+ <ol>
   <% @artist.top_tracks('US').each do |track| %>
-    <li class="form"><%= track.name%> 
-      <form class="row float-right playlists" action="/playlists/add_track" method="post">
-        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
-        <select name="playlist_id">
-          <option value="" selected="selected">pick playlist</option>
-          <% @playlists.each do |playlist|%>
-            <option value="<%= playlist.id %>"><%= playlist.name%></option>
-          <% end %>
-        </select>
-        <input type="hidden" name="track_id" value="<%= track.id %>" />
-      </form>
-     </li> 
+    <li class="form"><%= track.name%></li>
   <% end %>
 </ol>
 
-
-<script type="text/javascript">
-  $(function() {
-    $('form.playlists select').on('change', function (event) {
-      $(event.target).parent().submit();
-    });
-  });
-</script>
+<% end %>

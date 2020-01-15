@@ -17,9 +17,11 @@ def show
     @playlists = @spotify_user.playlists
     @artist = RSpotify::Artist.find(params[:id])
   else
-      redirect_to root_path and return
+    @artist = RSpotify::Artist.find(params[:id])
+    flash[:error] = '***'
   end
 end
+
 
 def new
 end

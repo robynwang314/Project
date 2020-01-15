@@ -21,7 +21,7 @@
         <% if @spotify_user %>
           <%= link_to 'SpotifyApp', users_path, class: 'navbar-brand' %>
         <% else %>
-          <%= link_to 'SpotifyApp', '/auth/spotify/', class: 'navbar-brand' %>
+          <%= link_to 'SpotifyApp', '/users', class: 'navbar-brand' %>
         <% end %>
       </a>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -53,6 +53,7 @@
         </div>
       </div>
     </nav>
+
 
     <%= yield %>
   </body>
