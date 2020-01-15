@@ -15,32 +15,32 @@ Users can either begin a search for an artist from the Navigation Bar without lo
   <img src="/app/assets/images/homepage.png" alt="App homepage">
 
 Beginning a search without logging in, will eventually return results with the artist's top 10 tracks, however, users must sign in to perform any further action.
-  <img src="index.png" alt="Artists results">
-  <img src="else.png" alt="Not logged in search results">
+  <img src="/app/assets/images/index.png" alt="Artists results">
+  <img src="/app/assets/images/else.png" alt="Not logged in search results">
 
   By choosing to sign in, users will be redirected to Spotify's login page for their credentials.
-  <img src="callback.png" alt="Spotify Login">
+  <img src="/app/assets/images/callback.png" alt="Spotify Login">
 
 After which, the user will be redirected to their user homepage. 
-  <img src="users.png" alt="Users Homepage">
+  <img src="/app/assets/images/users.png" alt="Users Homepage">
 
 From here, the user may navigate to view their existing playlists...
-  <img src="playlists.png" alt="User's playlists">
+  <img src="/app/assets/images/playlists.png" alt="User's playlists">
 
   further choose to view the contents of their playlists (up to 100 songs) 
-  <img src="playlist.png" alt="User's playlist">
+  <img src="/app/assets/images/playlist.png" alt="User's playlist">
 
   and remove tracks from an existing playlist
-  <img src="remove_track.png" alt="Remove_track">
+  <img src="/app/assets/images/remove_track.png" alt="Remove_track">
 
 Alternatively, Users who are logged in may search an artist, view their top 10 hits, and add a track to an existing playlist. 
-  <img src="search.png" alt="Search Form">
-  <img src="add_track.png" alt="Add_track">
+  <img src="/app/assets/images/search.png" alt="Search Form">
+  <img src="/app/assets/images/add_track.png" alt="Add_track">
 
   Choosing to add a track will redirect user to the chosen playlist with the track added. 
 
 Clicking "Sign Out" in the Navbar will sign the user out of the app, but the user must go to "My Account" to view their Spotify account page, and to fully log out of the Spotify session. 
-  <img src="navbar.png" alt="Navbar">
+  <img src="/app/assets/images/navbar.png" alt="Navbar">
 
 
 
