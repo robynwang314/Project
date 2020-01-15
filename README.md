@@ -9,7 +9,7 @@ This allows users to:
   4. view the songs in their existing playlists (up to 100 songs)
   5. remove a track from their existing playlist 
 
-User Manual
+# User Manual
 
 Users can either begin a search for an artist from the Navigation Bar without logging in, or choose to sign in with spotify. 
   <img src="/app/assets/images/homepage.png" alt="App homepage">
