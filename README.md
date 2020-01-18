@@ -1,6 +1,6 @@
 # Robyn's SpotifyApp
 
-SpotifyApp is Robyn Wang's final project for UC Berkley's Full Stack Coding Bootcamp. This app showcases her ability to build a Ruby on Rails Application, incorporate an external API, test with RSpec, and deploy to Heroku. 
+SpotifyApp is Robyn Wang's final project for UC Berkley's Full Stack Coding Bootcamp. This app demonstrates her ability to build a Ruby on Rails Application, incorporate an external API, test with RSpec, and deploy to Heroku. 
 
 Link: http://project-robyn-wang.herokuapp.com/
 Github: https://github.com/robynwang314/project

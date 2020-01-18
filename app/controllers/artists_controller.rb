@@ -1,12 +1,11 @@
 class ArtistsController < ApplicationController
 require 'rspotify'
-
+ 
 def index
-  if !(params[:artist_name]).empty?
-    @artists = RSpotify::Artist.search(params[:artist_name])
-  else
-    redirect_to new_artist_path
-  end
+  a = params[:artist_name]
+  redirect_to root_path and return if load_user.nil? and (a.nil? || a.empty?)
+  redirect_to new_artist_path and return if a.empty?
+  @artists = RSpotify::Artist.search(a)
 end
  
 def show

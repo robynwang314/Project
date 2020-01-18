@@ -1,7 +1,8 @@
 class PlaylistsController < ApplicationController
-require 'rspotify'
+require 'rspotify' 
 
   def index
+    redirect_to root_path and return if load_user.nil? 
     @spotify_user = load_user
     @playlists = @spotify_user.playlists
   end
