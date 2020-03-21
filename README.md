@@ -57,7 +57,7 @@ And it's code can be found at: https://github.com/robynwang314/project
   <img src="/app/assets/images/homepage.png" alt="App homepage" width="45%" float="left">
 
 <p>Beginning a search without logging in, will eventually return results with the artist's top 10 tracks, however, users must sign in to perform any further action.</p>
-  <img src="/app/assets/images/index.png" alt="Artists results" width="45%" float="left"> &nbsp;&nbsp;&nbsp;
+  <img src="/app/assets/images/index.png" alt="Artists results" width="45%" float="left"> &nbsp;
   <img src="/app/assets/images/else.png" alt="Not logged in search results" width="45%" float="right">
 
 <p>By choosing to sign in, users will be redirected to Spotify's login page for their credentials.</p>
@@ -76,7 +76,7 @@ And it's code can be found at: https://github.com/robynwang314/project
   <img src="/app/assets/images/remove_track.png" alt="Remove_track" width="45%" float="left">
 
 <p>Alternatively, Users who are logged in may search an artist, view their top 10 hits, and add a track to an existing playlist.</p>
-  <img src="/app/assets/images/search.png" alt="Search Form" width="45%" float="left"> &nbsp;&nbsp;&nbsp;
+  <img src="/app/assets/images/search.png" alt="Search Form" width="45%" float="left"> &nbsp;
   <img src="/app/assets/images/add_track.png" alt="Add_track" width="45%" float="right">
 
 <p>Choosing to add a track will redirect user to the chosen playlist with the track added.</p>>
