@@ -52,7 +52,7 @@ This live project can be view at: http://project-robyn-wang.herokuapp.com/
 And it's code can be found at: https://github.com/robynwang314/project
 
 ### User Manual ###
-
+<pre>
 Users can either begin a search for an artist from the Navigation Bar without logging in, or choose to sign in with spotify. 
   <img src="/app/assets/images/homepage.png" alt="App homepage" width="45%" float="left">
 
@@ -83,7 +83,7 @@ Choosing to add a track will redirect user to the chosen playlist with the track
 
 Clicking "Sign Out" in the Navbar will sign the user out of the app, but the user must go to "My Account" to view their Spotify account page, and to fully log out of the Spotify session. 
   <img src="/app/assets/images/navbar.png" alt="Navbar" width="45%" float="left">
-
+</pre>
 
 <div id="contact"></div> 
 
