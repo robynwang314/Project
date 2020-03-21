@@ -37,12 +37,22 @@ Spotify App integrates the following:
 <div id="setup"></div> 
 
 ## Getting Started ##
------
+First go <a href="https://developer.spotify.com/dashboard/">here</a> to create an account, fill out your information and whitelist your address by adding it to your redirect URI list. A Redirect URI might look something like http://localhost:3000/auth/spotify/callback.
 
-### Set Up Database ###
+<p>Then in your coding environment, create a new application using PostgreSQL:</p>
+<pre><code> $ rails new SpotifyApp --database=postgresql </code></pre>
 
-------
+<p>Once the application is created, enter into your "SpotifyApp" text editor and edit your database.yml file accordingly.</p>
 
+Then go into your Gemfile and install the <a href="https://github.com/guilhermesad/rspotify">rSpotify</a> Gem, which is a ruby wrapper for the Spotify API. 
+<pre>gem 'rspotify'</pre>
+And execute:
+<pre>bundle</pre>
+
+<p>Then change directory into your SpotifyApp project and create the initial database and start the server</p>
+<pre><code> $ rake db:create</code></pre>
+
+After, you may refer to <a href="https://github.com/guilhermesad/rspotify">rSpotify</a> and begin building out controllers, routes, views, models, and set up OAuth accordingly.
 
 <div id="usage"></div> 
 
